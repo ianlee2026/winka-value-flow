@@ -237,17 +237,17 @@
     <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 495 410 Q 610 375 590 320'); animation-delay:0.3s"/>
 
     <!-- ===== LABELS on lines ===== -->
-    <!-- 윈카 ↔ 채널 -->
-    <rect x="126" y="126" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
-    <text x="160" y="139" text-anchor="middle" class="label-text" fill="#0F6E56">운영 솔루션</text>
-    <rect x="240" y="126" width="68" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
-    <text x="274" y="139" text-anchor="middle" class="label-text" fill="#BA7517">회원 데이터</text>
+    <!-- 유저 ↔ 채널 (top-left) -->
+    <rect x="116" y="126" width="106" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
+    <text x="169" y="139" text-anchor="middle" class="label-text" fill="#0F6E56">정보 · 서비스 · 혜택</text>
+    <rect x="240" y="126" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
+    <text x="281" y="139" text-anchor="middle" class="label-text" fill="#BA7517">트래픽 · 데이터</text>
 
-    <!-- 윈카 ↔ 광고주 -->
-    <rect x="502" y="126" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
-    <text x="536" y="139" text-anchor="middle" class="label-text" fill="#0F6E56">맞춤 솔루션</text>
-    <rect x="398" y="126" width="85" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
-    <text x="440" y="139" text-anchor="middle" class="label-text" fill="#BA7517">데이터 · 수익쉐어</text>
+    <!-- 유저 ↔ 광고주 (top-right) -->
+    <rect x="512" y="126" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
+    <text x="546" y="139" text-anchor="middle" class="label-text" fill="#0F6E56">배팅 서비스</text>
+    <rect x="398" y="126" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
+    <text x="439" y="139" text-anchor="middle" class="label-text" fill="#BA7517">수익 (배팅 이용)</text>
 
     <!-- 채널 ↔ 광고주 -->
     <rect x="300" y="244" width="110" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
@@ -255,30 +255,30 @@
     <rect x="300" y="278" width="110" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
     <text x="355" y="291" text-anchor="middle" class="label-text" fill="#BA7517">광고료 · 레베뉴쉐어</text>
 
-    <!-- 채널 ↔ 유저 -->
-    <rect x="96" y="348" width="106" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
-    <text x="149" y="361" text-anchor="middle" class="label-text" fill="#0F6E56">정보 · 서비스 · 혜택</text>
-    <rect x="96" y="369" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
-    <text x="137" y="382" text-anchor="middle" class="label-text" fill="#BA7517">트래픽 · 데이터</text>
+    <!-- 채널 ↔ 윈카 (bottom-left) -->
+    <rect x="96" y="348" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
+    <text x="130" y="361" text-anchor="middle" class="label-text" fill="#0F6E56">운영 솔루션</text>
+    <rect x="96" y="369" width="68" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
+    <text x="130" y="382" text-anchor="middle" class="label-text" fill="#BA7517">회원 데이터</text>
 
-    <!-- 광고주 ↔ 유저 -->
+    <!-- 광고주 ↔ 윈카 (bottom-right) -->
     <rect x="528" y="348" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
-    <text x="562" y="361" text-anchor="middle" class="label-text" fill="#0F6E56">배팅 서비스</text>
-    <rect x="528" y="369" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
-    <text x="569" y="382" text-anchor="middle" class="label-text" fill="#BA7517">수익 (배팅 이용)</text>
+    <text x="562" y="361" text-anchor="middle" class="label-text" fill="#0F6E56">맞춤 솔루션</text>
+    <rect x="518" y="369" width="95" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
+    <text x="565" y="382" text-anchor="middle" class="label-text" fill="#BA7517">데이터 · 수익쉐어</text>
 
     <!-- ===== NODES ===== -->
 
-    <!-- 윈카 / 7플레이 -->
-    <g class="node-group" data-tip="핵심 모듈을 개발·개선하여\n채널에 운영 솔루션을,\n광고주에 나라별 맞춤 솔루션을 제공">
-      <ellipse cx="360" cy="65" rx="4" ry="4" fill="url(#gPurple)" class="pulse-ring"/>
-      <rect x="210" y="30" width="300" height="70" rx="14" fill="url(#gPurple)" opacity="0.12" class="node-shadow" transform="translate(3,3)"/>
-      <rect x="210" y="30" width="300" height="70" rx="14" fill="#fff" stroke="#534AB7" stroke-width="1" class="node-card"/>
-      <rect x="224" y="39" width="8" height="52" rx="4" fill="url(#gPurple)" opacity="0.8"/>
-      <text x="248" y="56" class="th" fill="#3C3489" dominant-baseline="central">윈카 / 7플레이</text>
-      <text x="248" y="78" class="ts" fill="#7B73D1" dominant-baseline="central">핵심 모듈 · B2B 솔루션 플랫폼</text>
-      <rect x="420" y="43" width="75" height="20" rx="10" fill="#EEEDFE"/>
-      <text x="457" y="54" text-anchor="middle" class="badge" fill="#534AB7" dominant-baseline="central">PLATFORM</text>
+    <!-- 유저 (TOP) -->
+    <g class="node-group" data-tip="서비스의 최종 소비자\n채널에 트래픽·데이터 제공\n광고주에 배팅 수익 제공">
+      <ellipse cx="360" cy="65" rx="4" ry="4" fill="url(#gBlue)" class="pulse-ring"/>
+      <rect x="210" y="30" width="300" height="70" rx="14" fill="url(#gBlue)" opacity="0.12" class="node-shadow" transform="translate(3,3)"/>
+      <rect x="210" y="30" width="300" height="70" rx="14" fill="#fff" stroke="#185FA5" stroke-width="1" class="node-card"/>
+      <rect x="224" y="39" width="8" height="52" rx="4" fill="url(#gBlue)" opacity="0.8"/>
+      <text x="248" y="56" class="th" fill="#0C447C" dominant-baseline="central">유저</text>
+      <text x="248" y="78" class="ts" fill="#3A7FCC" dominant-baseline="central">트래픽 · 데이터 · 수익 창출원</text>
+      <rect x="420" y="43" width="75" height="20" rx="10" fill="#E6F1FB"/>
+      <text x="457" y="54" text-anchor="middle" class="badge" fill="#185FA5" dominant-baseline="central">END USER</text>
     </g>
 
     <!-- 채널 -->
@@ -308,16 +308,16 @@
       <text x="528" y="294" class="ts" fill="#993C1D" dominant-baseline="central">나라별 시장 운영</text>
     </g>
 
-    <!-- 유저 -->
-    <g class="node-group" data-tip="서비스의 최종 소비자\n채널에 트래픽·데이터 제공\n광고주에 배팅 수익 제공">
-      <ellipse cx="360" cy="440" rx="4" ry="4" fill="url(#gBlue)" class="pulse-ring"/>
-      <rect x="213" y="413" width="300" height="70" rx="14" fill="url(#gBlue)" opacity="0.12" class="node-shadow" transform="translate(3,3)"/>
-      <rect x="210" y="410" width="300" height="70" rx="14" fill="#fff" stroke="#185FA5" stroke-width="1" class="node-card"/>
-      <rect x="224" y="419" width="8" height="52" rx="4" fill="url(#gBlue)" opacity="0.8"/>
-      <text x="248" y="436" class="th" fill="#0C447C" dominant-baseline="central">유저</text>
-      <text x="248" y="458" class="ts" fill="#3A7FCC" dominant-baseline="central">트래픽 · 데이터 · 수익 창출원</text>
-      <rect x="420" y="423" width="75" height="20" rx="10" fill="#E6F1FB"/>
-      <text x="457" y="434" text-anchor="middle" class="badge" fill="#185FA5" dominant-baseline="central">END USER</text>
+    <!-- 윈카 / 7플레이 (BOTTOM) -->
+    <g class="node-group" data-tip="핵심 모듈을 개발·개선하여\n채널에 운영 솔루션을,\n광고주에 나라별 맞춤 솔루션을 제공">
+      <ellipse cx="360" cy="440" rx="4" ry="4" fill="url(#gPurple)" class="pulse-ring"/>
+      <rect x="213" y="413" width="300" height="70" rx="14" fill="url(#gPurple)" opacity="0.12" class="node-shadow" transform="translate(3,3)"/>
+      <rect x="210" y="410" width="300" height="70" rx="14" fill="#fff" stroke="#534AB7" stroke-width="1" class="node-card"/>
+      <rect x="224" y="419" width="8" height="52" rx="4" fill="url(#gPurple)" opacity="0.8"/>
+      <text x="248" y="436" class="th" fill="#3C3489" dominant-baseline="central">윈카 / 7플레이</text>
+      <text x="248" y="458" class="ts" fill="#7B73D1" dominant-baseline="central">핵심 모듈 · B2B 솔루션 플랫폼</text>
+      <rect x="420" y="423" width="75" height="20" rx="10" fill="#EEEDFE"/>
+      <text x="457" y="434" text-anchor="middle" class="badge" fill="#534AB7" dominant-baseline="central">PLATFORM</text>
     </g>
 
     <!-- ===== Center cycle icon ===== -->
