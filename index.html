@@ -193,75 +193,81 @@
         <path d="M1 1.5L8 5L1 8.5" fill="none" stroke="#D4910F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </marker>
 
-      <!-- Flow paths (named for particle offset-path) -->
-      <path id="p-wc" d="M 270 100 Q 168 145 155 190" fill="none"/>
-      <path id="p-cw" d="M 175 190 Q 240 145 290 100" fill="none"/>
-      <path id="p-wa" d="M 450 100 Q 552 145 565 190" fill="none"/>
-      <path id="p-aw" d="M 545 190 Q 480 145 430 100" fill="none"/>
-      <path id="p-ca" d="M 230 258 L 490 258" fill="none"/>
-      <path id="p-ac" d="M 490 275 L 230 275" fill="none"/>
-      <path id="p-cu" d="M 140 320 Q 125 375 240 410" fill="none"/>
-      <path id="p-uc" d="M 225 410 Q 108 375 125 320" fill="none"/>
-      <path id="p-au" d="M 575 320 Q 590 375 480 410" fill="none"/>
-      <path id="p-ua" d="M 495 410 Q 610 375 590 320" fill="none"/>
     </defs>
 
     <!-- ===== FLOW LINES ===== -->
-    <!-- Green = service/solution flow -->
-    <path d="M 270 100 Q 168 145 155 190" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
-    <path d="M 450 100 Q 552 145 565 190" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
-    <line x1="230" y1="258" x2="490" y2="258" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
-    <path d="M 140 320 Q 125 375 240 410" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
-    <path d="M 575 320 Q 590 375 480 410" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
+    <!--
+      Layout: 유저(top, y=30-100) / 채널(left, y=190-330) / 광고주(right, y=190-330) / 윈카(bottom, y=410-480)
+      Green = service/solution provided (green arrow tip = receiver)
+      Amber = data/revenue returned (amber arrow tip = receiver)
+    -->
 
-    <!-- Amber = data/revenue flow -->
-    <path d="M 175 190 Q 240 145 290 100" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line-rev" marker-end="url(#arrA)" opacity="0.7"/>
-    <path d="M 545 190 Q 480 145 430 100" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line-rev" marker-end="url(#arrA)" opacity="0.7"/>
+    <!-- 채널 → 유저(top): 정보·서비스·혜택 (green, upward-left) -->
+    <path d="M 155 190 Q 168 145 270 100" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
+    <!-- 유저(top) → 채널: 트래픽·데이터 (amber, downward-left) -->
+    <path d="M 290 100 Q 240 145 175 190" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line" marker-end="url(#arrA)" opacity="0.7"/>
+
+    <!-- 광고주 → 유저(top): 배팅서비스 (green, upward-right) -->
+    <path d="M 565 190 Q 552 145 450 100" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
+    <!-- 유저(top) → 광고주: 수익 (amber, downward-right) -->
+    <path d="M 430 100 Q 480 145 545 190" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line" marker-end="url(#arrA)" opacity="0.7"/>
+
+    <!-- 채널 → 광고주: 트래픽·회원데이터 (green, horizontal) -->
+    <line x1="230" y1="258" x2="490" y2="258" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
+    <!-- 광고주 → 채널: 광고료·레베뉴쉐어 (amber, horizontal) -->
     <line x1="490" y1="275" x2="230" y2="275" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line-rev" marker-end="url(#arrA)" opacity="0.7"/>
-    <path d="M 225 410 Q 108 375 125 320" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line-rev" marker-end="url(#arrA)" opacity="0.7"/>
-    <path d="M 495 410 Q 610 375 590 320" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line-rev" marker-end="url(#arrA)" opacity="0.7"/>
+
+    <!-- 윈카(bottom) → 채널: 운영솔루션 (green, upward-left) -->
+    <path d="M 240 410 Q 125 375 140 320" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
+    <!-- 채널 → 윈카(bottom): 회원데이터 (amber, downward-left) -->
+    <path d="M 125 320 Q 108 375 225 410" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line" marker-end="url(#arrA)" opacity="0.7"/>
+
+    <!-- 윈카(bottom) → 광고주: 맞춤솔루션 (green, upward-right) -->
+    <path d="M 480 410 Q 590 375 575 320" fill="none" stroke="#1DB88E" stroke-width="1.8" class="flow-line" marker-end="url(#arrG)" opacity="0.7"/>
+    <!-- 광고주 → 윈카(bottom): 데이터·수익쉐어 (amber, downward-right) -->
+    <path d="M 590 320 Q 610 375 495 410" fill="none" stroke="#D4910F" stroke-width="1.8" class="flow-line" marker-end="url(#arrA)" opacity="0.7"/>
 
     <!-- ===== FLOWING PARTICLES ===== -->
-    <!-- Green particles -->
-    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 270 100 Q 168 145 155 190')"/>
-    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 450 100 Q 552 145 565 190'); animation-delay:0.4s"/>
+    <!-- Green particles (service flow) -->
+    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 155 190 Q 168 145 270 100')"/>
+    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 565 190 Q 552 145 450 100'); animation-delay:0.4s"/>
     <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 230 258 L 490 258'); animation-delay:0.2s"/>
-    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 140 320 Q 125 375 240 410'); animation-delay:0.6s"/>
-    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 575 320 Q 590 375 480 410'); animation-delay:1.0s"/>
+    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 240 410 Q 125 375 140 320'); animation-delay:0.6s"/>
+    <circle r="3" fill="#1DB88E" filter="url(#glowGreen)" class="particle" style="offset-path:path('M 480 410 Q 590 375 575 320'); animation-delay:1.0s"/>
 
-    <!-- Amber particles -->
-    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 175 190 Q 240 145 290 100'); animation-delay:1.2s"/>
-    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 545 190 Q 480 145 430 100'); animation-delay:0.5s"/>
+    <!-- Amber particles (data/revenue flow) -->
+    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 290 100 Q 240 145 175 190'); animation-delay:1.2s"/>
+    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 430 100 Q 480 145 545 190'); animation-delay:0.5s"/>
     <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 490 275 L 230 275'); animation-delay:0.9s"/>
-    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 225 410 Q 108 375 125 320'); animation-delay:1.5s"/>
-    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 495 410 Q 610 375 590 320'); animation-delay:0.3s"/>
+    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 125 320 Q 108 375 225 410'); animation-delay:1.5s"/>
+    <circle r="3" fill="#D4910F" filter="url(#glowAmber)" class="particle" style="offset-path:path('M 590 320 Q 610 375 495 410'); animation-delay:0.3s"/>
 
     <!-- ===== LABELS on lines ===== -->
-    <!-- 유저 ↔ 채널 (top-left) -->
-    <rect x="116" y="126" width="106" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
-    <text x="169" y="139" text-anchor="middle" class="label-text" fill="#0F6E56">정보 · 서비스 · 혜택</text>
-    <rect x="240" y="126" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
-    <text x="281" y="139" text-anchor="middle" class="label-text" fill="#BA7517">트래픽 · 데이터</text>
+    <!-- 채널 ↔ 유저 (top-left diagonal) -->
+    <rect x="116" y="120" width="106" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
+    <text x="169" y="133" text-anchor="middle" class="label-text" fill="#0F6E56">정보 · 서비스 · 혜택</text>
+    <rect x="240" y="138" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
+    <text x="281" y="151" text-anchor="middle" class="label-text" fill="#BA7517">트래픽 · 데이터</text>
 
-    <!-- 유저 ↔ 광고주 (top-right) -->
-    <rect x="512" y="126" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
-    <text x="546" y="139" text-anchor="middle" class="label-text" fill="#0F6E56">배팅 서비스</text>
-    <rect x="398" y="126" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
-    <text x="439" y="139" text-anchor="middle" class="label-text" fill="#BA7517">수익 (배팅 이용)</text>
+    <!-- 광고주 ↔ 유저 (top-right diagonal) -->
+    <rect x="512" y="120" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
+    <text x="546" y="133" text-anchor="middle" class="label-text" fill="#0F6E56">배팅 서비스</text>
+    <rect x="398" y="138" width="82" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
+    <text x="439" y="151" text-anchor="middle" class="label-text" fill="#BA7517">수익 (배팅 이용)</text>
 
-    <!-- 채널 ↔ 광고주 -->
+    <!-- 채널 ↔ 광고주 (horizontal middle) -->
     <rect x="300" y="244" width="110" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
     <text x="355" y="257" text-anchor="middle" class="label-text" fill="#0F6E56">트래픽 · 회원 데이터</text>
     <rect x="300" y="278" width="110" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
     <text x="355" y="291" text-anchor="middle" class="label-text" fill="#BA7517">광고료 · 레베뉴쉐어</text>
 
-    <!-- 채널 ↔ 윈카 (bottom-left) -->
+    <!-- 윈카 ↔ 채널 (bottom-left diagonal) -->
     <rect x="96" y="348" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
     <text x="130" y="361" text-anchor="middle" class="label-text" fill="#0F6E56">운영 솔루션</text>
     <rect x="96" y="369" width="68" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
     <text x="130" y="382" text-anchor="middle" class="label-text" fill="#BA7517">회원 데이터</text>
 
-    <!-- 광고주 ↔ 윈카 (bottom-right) -->
+    <!-- 윈카 ↔ 광고주 (bottom-right diagonal) -->
     <rect x="528" y="348" width="68" height="18" rx="9" fill="#fff" stroke="#1DB88E" stroke-width="0.5" class="label-bg"/>
     <text x="562" y="361" text-anchor="middle" class="label-text" fill="#0F6E56">맞춤 솔루션</text>
     <rect x="518" y="369" width="95" height="18" rx="9" fill="#fff" stroke="#D4910F" stroke-width="0.5" class="label-bg"/>
